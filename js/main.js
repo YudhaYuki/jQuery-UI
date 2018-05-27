@@ -1,23 +1,17 @@
 $(document).ready(function() {
 
-    $('.draggable').draggable({
-        // axis: "x"
-        cancel: ".not_this",
-        containment: "parent",
-        grid: [50, 20],
-        handle: ".handle",
-        opacity: ".35",
-        drag: function(event, ui) {
-            console.log(ui.position);
+    $('.draggable').draggable();
+    $('.droppable').droppable({
+
+        accept: ".draggable",
+        drop: function(event, ui) {
+            $(this).addClass('accepted');
+            console.log(ui.draggable.attr("class"));
+        },
+        out: function(event, ui) {
+            $(this).removeClass('accepted');
+
         }
     });
-
-
-    // $('.draggable').draggable("disable");
-
-    // $('.draggable').draggable("destroy");
-
-    // $('.draggable').draggable("enable");
-
 
 });
