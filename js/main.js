@@ -1,17 +1,15 @@
 $(document).ready(function() {
 
-    $('.draggable').draggable();
-    $('.droppable').droppable({
-
-        accept: ".draggable",
-        drop: function(event, ui) {
-            $(this).addClass('accepted');
-            console.log(ui.draggable.attr("class"));
-        },
-        out: function(event, ui) {
-            $(this).removeClass('accepted');
-
-        }
+    $('.resizable').resizable({
+        
+        // animate:true,
+        // animateDuration:100
+        aspectRatio: true,
+        containment: ".block",
+        // ghost: true
+        grid: [50,50],
+        maxHeight: 250,
+        minHeight: 50
     });
 
 });

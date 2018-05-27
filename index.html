@@ -11,47 +11,36 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
 
-    <link href="css/jquery-ui.min.css">
-    <link href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
 
 
-    <script src="js/main.js"></script>
+    <script type="application/javascript" src="js/main.js"></script>
 
 
     <style>
-            .draggable {
-                width: 100px;
-                height: 100px;
-                background: red;
-            }
+        .resizable {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
 
-            .droppable {
-                width: 300px;
-                height: 300px;
-                background: blue;
-            }
-
-            .accepted {
-                background: green;
-            }
+        .block {
+            width: 300px;
+            height: 300px;
+            background: red;
+        }
 
     </style>
 
 </head>
 <body>
 
-    <div class="draggable">
-        <div class="handle">
-            X
+    <div class="block">
+        <div class="resizable">
+            Resizable !
         </div>
-        <p>Drag me around !</p>
     </div>
-
-
-    <div class="droppable">
-        <p>Drop here !</p>
-    </div>
-
 
 </body>
 </html>
