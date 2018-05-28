@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-    $('#sortable').sortable();
-
-    $(".trigger").click(function() {
-        var list = $('#sortable').sortable("toArray");
-        console.log(list);
-    })
+    $('#accordion').accordion({
+        active:2,
+        animate: 300,
+        collapsible: true,
+        event: "mouseover"
+    });
 
 });
