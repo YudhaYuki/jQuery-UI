@@ -1,10 +1,14 @@
 $(document).ready(function() {
 
-    $('#datepicker').datepicker({
-        minDate: 0,
-        maxDate: 10,
-        dayNamesMin: ["Sen","Sel", "Tu", "We", "Th", "Fr", "Sa"]
-    });
+    var list = [
+        "ford",
+        "chevy",
+        "honda"
+    ]
 
+    $('#tags').autocomplete({
+        source: list,
+        minlength: 3
+    });
 
 });
