@@ -2,10 +2,8 @@ $(document).ready(function() {
 
     $(document).click(function() {
 
-        $('.button').addClass("otherClass", 1000, function() {
-            
-            $(this).removeClass('otherClass', 1000)
-
+        $('.button').effect('shake', 1000, function() {
+            console.log('Done !');
         })
     
     });
