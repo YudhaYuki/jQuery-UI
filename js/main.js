@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-    $('#selectable').selectable({
-        filter: '.available',
-        selected: function(event, ui) {
-            console.log(ui.selected.innerText);
-        }
-    });
+    $('#sortable').sortable();
+
+    $(".trigger").click(function() {
+        var list = $('#sortable').sortable("toArray");
+        console.log(list);
+    })
 
 });
